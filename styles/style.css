@@ -1,0 +1,294 @@
+body {
+  font-family: 'Courier New', sans-serif;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  position: relative;
+  text-align: center;
+  line-height: 1.5em;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  background: black ;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+li {
+    overflow: hidden;
+    padding-left: 0;
+}
+
+/* begin header */
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 5em;
+    background: black;
+    opacity: 1;
+}
+
+header img {
+    max-width: 20vw;
+    max-height: 4.5em;
+    padding: 1.5em;
+}
+
+nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform:translateX(100%);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+}
+
+nav ul li {
+    margin-right: 2em;
+}
+  
+nav button {
+    background: none;
+    background-image: url('../images/button-wit.svg');
+    background-repeat: no-repeat;
+    border: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    top: 2vh;
+    right: 3vh;
+    height: 5vh;
+    width: 10vw;
+    z-index: 1;
+    transition-duration: 0.3s;
+}
+  
+nav a {
+    display: block;
+    line-height: 100%;
+    font-size: 1.2em;
+    margin: 0.4rem auto;
+    padding: 0.5em 0;
+    border: none;
+    appearance: none;
+    color: white;
+}
+
+nav li:hover {
+    background: #c41a44;
+}
+
+nav a.selected {
+    font-weight: bold;
+}
+  
+nav.toonNav ul {
+    transform:translateX(0%);
+    transition: 0.5s;
+}
+  
+nav.toonNav button {
+    background-image: url('../images/Kruis.svg');
+    transition-duration: 0.3s;
+}
+
+/* einde header */
+
+/* begin footer */
+
+footer {
+    font-weight: bold;
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 5em;
+}
+
+footer p {
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+}
+
+/* einde footer */
+
+.groot { 
+    background: url('../images/ik.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.groot h1 {
+    text-transform: uppercase;
+    width: 40vw;
+    margin-right: 1em;
+    font-size: 3em;
+    line-height: 1em;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* begin wie ben ik? */
+
+#homepagina > section:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 8em;
+}
+  
+#homepagina > section:nth-of-type(1) img {
+    min-width: 35vw;
+}
+  
+#homepagina > section:nth-of-type(1) h2 {
+    margin: 1.8em 0 1.5em 0;
+    padding: 0;
+}
+
+#homepagina > section:nth-of-type(1) p {
+    max-width: 50vw;
+}
+
+#homepagina > section:nth-of-type(1) ul {
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+#homepagina > section:nth-of-type(1) ul li {
+    display: list-item;
+    overflow: visible;
+}
+
+/* einde wie ben ik? */
+
+#portfolio > section:nth-of-type(1) ul li h3 {
+    padding: 2em 0;
+    text-align: center
+}
+
+#portfolio > section:nth-of-type(1) ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#portfolio > section:nth-of-type(1) img {
+    max-width: 90%;
+}
+
+#portfolio > section:nth-of-type(1) p {
+    margin: 0 1em;
+}
+
+@media (max-width: 991px) {
+    header {
+        height: 4em;
+    }
+
+    header img {
+        max-height: 2.5em;
+    }
+
+    .groot {
+        background: url('/./images/ik-klein.jpg');
+        background-size: cover;
+        width: 100%;
+        opacity: 1;
+        align-items: flex-end;
+    }
+
+    .groot h1 {
+        text-transform: uppercase;
+        font-size: 2em;
+        width: 100%;
+        margin: 0.5em;
+    }
+
+    #homepagina > section:nth-of-type(1) {
+        margin-top: 1em;
+    }  
+
+    #homepagina > section:nth-of-type(1) img {
+        display: none;
+    }  
+
+    #homepagina > section:nth-of-type(1) p {
+        max-width: 80vw;
+    }
+}
+
+@media (min-width: 992px) {      
+    header {
+        background: black;
+        z-index: 1;
+    }
+
+    nav {
+      order: 0;
+      padding-right: 2em;
+    }
+    
+    nav button {
+     display: none; 
+    }
+    
+    nav ul {
+      position: relative;
+      transform:translateX(0);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background: none;
+      padding: 0;
+      font-size: 0.9em;
+    }
+  
+    nav ul li {
+      padding: 1em;
+    }
+
+    #homepagina > section:nth-of-type(1) {
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+    
+    #homepagina > section:nth-of-type(1) img {
+        max-width: 30%;
+    }
+}
