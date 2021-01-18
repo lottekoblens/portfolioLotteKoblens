@@ -108,7 +108,7 @@ nav.toonNav ul {
 }
   
 nav.toonNav button {
-    background-image: url('../images/Kruis.svg');
+    background-image: url('../images/kruis-wit.svg');
     transition-duration: 0.3s;
 }
 
@@ -239,10 +239,43 @@ footer p {
     display: inline-block;
 }
 
-#cv-pagina > img {
-    max-width: 80%;
-    max-height: 90vh;
-    margin-top: 6em;
+#cv-pagina section:nth-of-type(1) {
+    margin-top: 7em;
+}
+
+#cv-pagina section:nth-of-type(1) h2 {
+    padding-top: 2em;
+}
+
+#cv-pagina section:nth-of-type(1) article:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    background:  #c41a44;
+    width: 50%;
+}
+
+#cv-pagina section:nth-of-type(1) article:nth-of-type(2)  {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    background:  #c41a44;
+    width: 50%;
+}
+
+#cv-pagina section:nth-of-type(1) article:nth-of-type(1) ol li {
+    margin-bottom: 2em;
+}
+
+#cv-pagina section:nth-of-type(1) article:nth-of-type(1) ol {
+    padding: 0 2em;
+}
+#cv-pagina section:nth-of-type(1) article:nth-of-type(1) img {
+    width: 20vw;
+    margin-top: 5em;
 }
 
 /* einde portfolio pagina */
@@ -295,6 +328,14 @@ footer p {
 
     #portfolio > section:nth-of-type(1) img {
         max-width: 80vw;
+    }
+
+    #cv-pagina section:nth-of-type(1) article:nth-of-type(1) {
+        width: 100%;
+    }
+
+    #cv-pagina section:nth-of-type(1) article:nth-of-type(1) img {
+        margin-top: 2em;
     }
 }
 
