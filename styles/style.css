@@ -247,7 +247,7 @@ footer p {
     padding-top: 2em;
 }
 
-#cv-pagina section:nth-of-type(1) article:nth-of-type(1) {
+#cv-pagina section:nth-of-type(1) article:nth-of-type(1), #cv-pagina section:nth-of-type(1) article:nth-of-type(2) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -258,24 +258,20 @@ footer p {
 }
 
 #cv-pagina section:nth-of-type(1) article:nth-of-type(2)  {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    text-align: center;
-    background:  #c41a44;
-    width: 50%;
+    margin-left: 50%;
 }
 
-#cv-pagina section:nth-of-type(1) article:nth-of-type(1) ol li {
+#cv-pagina section:nth-of-type(1) article:nth-of-type(1) ol li, #cv-pagina section:nth-of-type(1) article:nth-of-type(2) ol li {
     margin-bottom: 2em;
 }
 
-#cv-pagina section:nth-of-type(1) article:nth-of-type(1) ol {
+#cv-pagina section:nth-of-type(1) article:nth-of-type(1) ol, #cv-pagina section:nth-of-type(1) article:nth-of-type(2) ol {
     padding: 0 2em;
 }
-#cv-pagina section:nth-of-type(1) article:nth-of-type(1) img {
+
+#cv-pagina section:nth-of-type(1) article:nth-of-type(1) img, #cv-pagina section:nth-of-type(1) article:nth-of-type(2) img {
     width: 20vw;
-    margin-top: 5em;
+    margin-top: 2.5em;
 }
 
 /* einde portfolio pagina */
@@ -330,12 +326,22 @@ footer p {
         max-width: 80vw;
     }
 
-    #cv-pagina section:nth-of-type(1) article:nth-of-type(1) {
-        width: 100%;
+    #cv-pagina section:nth-of-type(1) h2 {
+        padding-top: 0;
     }
 
-    #cv-pagina section:nth-of-type(1) article:nth-of-type(1) img {
+    #cv-pagina section:nth-of-type(1) article:nth-of-type(1) {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    #cv-pagina section:nth-of-type(1) article:nth-of-type(1) img, #cv-pagina section:nth-of-type(1) article:nth-of-type(2) img {
         margin-top: 2em;
+    }
+
+    #cv-pagina section:nth-of-type(1) article:nth-of-type(2)  {
+        margin-left: 0;
+        width: 100%;
     }
 }
 
@@ -378,5 +384,13 @@ footer p {
     
     #homepagina > section:nth-of-type(1) img {
         max-width: 30%;
+    }
+
+    #cv-pagina section:nth-of-type(1) article:nth-of-type(2) div:nth-of-type(2) {
+        order: 0;
+    }
+
+    #cv-pagina section:nth-of-type(1) article:nth-of-type(2) div:nth-of-type(1) {
+        order: 1;
     }
 }
