@@ -317,7 +317,7 @@ footer p {
     }
 
     .groot {
-        background: url('/./images/ik-klein.jpg');
+        background: url('../images/ik-klein.jpg');
         background-size: cover;
         width: 100%;
         opacity: 1;
